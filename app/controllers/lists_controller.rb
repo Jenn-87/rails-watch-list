@@ -16,10 +16,6 @@ class ListsController < ApplicationController
 
   def create
     @list = List.new(list_params)
-    # if list.photo.attach(params[:photo])
-    #   params[:photo].each do |image|
-    #   list.photo.attach(image)
-    # else
 
     if @list.save
       redirect_to list_path(@list)
@@ -43,7 +39,3 @@ class ListsController < ApplicationController
     params.require(:list).permit(:name, :photo)
   end
 end
-
-
-# if @list.photo.attached?
-# else
