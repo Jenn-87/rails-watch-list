@@ -1,11 +1,11 @@
 <div class="banner" style="background-image: url(https://source.unsplash.com/KWBTG1e5u70)">
   <div class="container">
+      <h1>New list</h1>
   </div>
 </div>
 
 <div class="new-lists">
   <div class="new-list">
-    <h1>Create a new bookmark</h1>
     <%= simple_form_for [ @list, @bookmark ] do |f| %>
       <%= f.input :comment %>
       <%= f.association :movie %>
